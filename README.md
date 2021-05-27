@@ -24,7 +24,7 @@ Making the client ask our Rails back-end to talk to an external API increases ou
 
 The notable React code in `./client` is:
 
-- client/README.md: Installation and run instructions.
+- [client/README.md](client/README.md): Installation and run instructions.
 - client/src/App.js: Initialize hooks that ResultsPane and SearchBox use to communicate. Hits the rails endpoint to fetch results.
 - client/src/components/Map.js: Loads the Google Map viewer. Can place pins and zoom to fit all pins in the viewer's visible area.
 - client/src/components/ResultsPane.js: Loads results into a left-side pane when a search is performed. 
