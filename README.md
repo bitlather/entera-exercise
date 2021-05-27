@@ -12,6 +12,15 @@ Original prompt: [entera_test.md](https://gist.github.com/zstarer/8fb0f7e982cca1
 > https://collegescorecard.ed.gov/data/documentation/ https://github.com/RTICWDT/open-data-maker/blob/master/API.md
 
 
+Installation
+------------
+
+Follow the instructions in:
+
+- [api/README.md](api/README.md)
+- [client/README.md](client/README.md)
+
+
 Code Walkthrough
 ----------------
 
