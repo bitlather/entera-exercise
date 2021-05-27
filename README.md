@@ -25,20 +25,20 @@ Making the client ask our Rails back-end to talk to an external API increases ou
 The notable React code in `./client` is:
 
 - [client/README.md](client/README.md): Installation and run instructions.
-- client/src/App.js: Initialize hooks that ResultsPane and SearchBox use to communicate. Hits the rails endpoint to fetch results.
-- client/src/components/Map.js: Loads the Google Map viewer. Can place pins and zoom to fit all pins in the viewer's visible area.
-- client/src/components/ResultsPane.js: Loads results into a left-side pane when a search is performed. 
-- client/src/components/SearchBox.js: Handles the search input box, button, and firing off a search.
+- [client/src/App.js](client/src/App.js): Initialize hooks that ResultsPane and SearchBox use to communicate. Hits the rails endpoint to fetch results.
+- [client/src/components/Map.js](client/src/components/Map.js): Loads the Google Map viewer. Can place pins and zoom to fit all pins in the viewer's visible area.
+- [client/src/components/ResultsPane.js](client/src/components/ResultsPane.js): Loads results into a left-side pane when a search is performed. 
+- [client/src/components/SearchBox.js](client/src/components/SearchBox.js): Handles the search input box, button, and firing off a search.
 
 The notable Rails API code in `./api` is:
 
-- api/README.md: Installation and run instructions.
-- api/app/controllers/api/v1/college_controller.rb: Gets no more than one page of results from the external API using the CollegeScoreCardService.
-- api/app/models/college_score_card_school.rb: A table-less model that contains a single school's information.
-- api/app/serializers/serializable_college_score_card_school.rb: The JSONAPI serializer for returning schools.
-- api/app/services/college_score_card_service.rb: Service for requesting data from external API (https://api.data.gov/ed/collegescorecard/)
-- api/config/secrets.yml: Contains the external API's key. The key is plaintext for development environments; in a production environment, it would be fetched from an environment variable so that a malicious user who gained access to our code wouldn't also have our private keys.
-- api/spec/acceptance/college_controller_spec.rb: An rspec_api_documentation test that asserts the results of the endpoint (with a mocked CollegeScoreCardService to prevent requests to the third-party API) and generates documentation when `$ rake docs:generate` is run.
+- [api/README.md](api/README.md): Installation and run instructions.
+- [api/app/controllers/api/v1/college_controller.rb](api/app/controllers/api/v1/college_controller.rb): Gets no more than one page of results from the external API using the CollegeScoreCardService.
+- [api/app/models/college_score_card_school.rb](api/app/models/college_score_card_school.rb): A table-less model that contains a single school's information.
+- [api/app/serializers/serializable_college_score_card_school.rb](api/app/serializers/serializable_college_score_card_school.rb): The JSONAPI serializer for returning schools.
+- [api/app/services/college_score_card_service.rb](api/app/services/college_score_card_service.rb): Service for requesting data from external API (https://api.data.gov/ed/collegescorecard/)
+- [api/config/secrets.yml](api/config/secrets.yml): Contains the external API's key. The key is plaintext for development environments; in a production environment, it would be fetched from an environment variable so that a malicious user who gained access to our code wouldn't also have our private keys.
+- [api/spec/acceptance/college_controller_spec.rb](api/spec/acceptance/college_controller_spec.rb): An rspec_api_documentation test that asserts the results of the endpoint (with a mocked CollegeScoreCardService to prevent requests to the third-party API) and generates documentation when `$ rake docs:generate` is run.
 
 
 User Acceptance Testing
